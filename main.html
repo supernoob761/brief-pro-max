@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Medical Staff Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="title">
+            <h1>Staff Directory</h1>
+        </div>
+        <div class="search">
+            <input id="search" type="text" placeholder="Search for a doctor or specialty...">
+            <div class="Category_sel">
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+            </div>
+            <button onclick="OpenAdd()"><i  class="fa-solid fa-user-plus"></i> Add New Staff</button>
+        </div>
+        <div class="staff" id="staffList">
+            <div class="staff-card">
+                <h3><i class="fa-solid fa-user"></i> Sarah Johnson</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="staff-card">
+                <h3><i class="fa-solid fa-user"></i> Michael Chen</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="staff-card">
+                <h3><i class="fa-solid fa-user"></i> Emily Rodriguez</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="staff-card">
+                <h3><i class="fa-solid fa-user"></i> James Wilson</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="staff-card">
+                <h3><i class="fa-solid fa-user"></i> Lisa Thompson</h3>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+    </aside>
+    <section id="main">
+        <div class="main-goods">
+            <div class="welcome-message">   
+                <i class="fa-solid fa-bell default-icon"></i>
+                <h2>Welcome to Staff Sectioning</h2>
+                <p>Select a staff member to view details or add a new one</p>
+            </div>
+                    <div class="teh-grid">
+            <div class="zone" id="zone-conference">
+                <div class="zone-header">
+                    <h4><i class="fa-solid fa-mug-hot"></i> Staff room</h4>
+                    <button id="Enter-Form" class="add-to-zone-btn" data-zone="conference"><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+                <ul class="staff-in-zone-list">
+                </ul>
+                <img class="div-img Conference" src="./images/copymage.jpg" alt="">
+            </div>
+            <div class="zone" id="zone-conference">
+                <div class="zone-header">
+                    <h4><i class="fa-solid fa-box-archive"></i> Archives room</h4>
+                    <button class="add-to-zone-btn" data-zone="conference"><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+                <ul class="staff-in-zone-list">
+                </ul>
+                <img class="div-img Conference" src="./images/plan-6918d7e78ba30539026036_-_Copy.jpg" alt="">
+            </div>
+            <div class="zone" id="zone-conference">
+                <div class="zone-header">
+                    <h4><i class="fa-solid fa-shield"></i> Security room</h4>
+                    <button class="add-to-zone-btn" data-zone="conference"><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+                <ul class="staff-in-zone-list">
+                </ul>
+                <img class="div-img Conference" src="./images/plan-6918d7e78ba30539026036_-_Copy_4.jpg" alt="">
+            </div>
+            <div class="zone" id="zone-conference">
+                <div class="zone-header">
+                    <h4><i class="fa-solid fa-bell-concierge"></i> Reception</h4>
+                    <button class="add-to-zone-btn" data-zone="conference"><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+                <ul class="staff-in-zone-list">
+                </ul>
+                <img class="div-img Conference" src="./images/Reception-png.jpg" alt="">
+            </div>
+            <div class="zone" id="zone-conference">
+                <div class="zone-header">
+                    <h4><i class="fa-solid fa-people-group"></i> Conference Room</h4>
+                    <button class="add-to-zone-btn" data-zone="conference"><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+                <ul class="staff-in-zone-list">
+                </ul>
+                <img class="div-img Conference" src="./images/Salle-de-conference-png.jpg" alt="">
+            </div>
+            <div class="zone" id="zone-conference">
+                <div class="zone-header">
+                    <h4><i class="fa-solid fa-server"></i> Server room</h4>
+                    <button class="add-to-zone-btn" data-zone="conference"><i class="fa-solid fa-user-plus"></i></button>
+                </div>
+                <ul class="staff-in-zone-list">
+                </ul>
+                <img class="div-img Conference" src="./images/Salle-des-serveurs-png.jpg" alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+    <div id="form" class="form">
+        <form action="">
+            <h1><i class="fa-solid fa-user-plus"></i> ADD A STAFF</h1>
+            <div class="info">
+        <div class="Namenroll">
+    <input type="text" id="name" placeholder="Name">
+    <select id="genre" name="genre">
+        <option value="">-- Sélectionnez --</option>
+        <option value="crap">crap</option>
+        <option value="crap">crap</option>
+        <option value="crap">crap</option>
+        <option value="crap">crap</option>
+    </select>
+</div>
+
+<div class="photo">
+    <label for="imgInput" class="photo-box">
+        <img id="preview" class="photo-preview" style="display:none;">
+        <span class="photo-text"><i class="fa-solid fa-image"></i> Upload Photo</span>
+    </label>
+    <input type="file" id="imgInput" accept="image/*" hidden>
+</div>
+<input type="email" id="email" placeholder="example@gmail.com">
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}">
+        </div>
+        <div class="Extra_crap">
+        
+        <button><i class="fa-solid fa-medal"></i>Add experiance</button>
+        
+        </div>
+        <div class="buttons">
+            <div class="Cancel">
+                <button onclick="RemoveAdd()"><i class="fa-solid fa-trash"></i>Cancel</button>
+            </div>
+            <div class="Add">
+                <button type="submit"><i class="fa-solid fa-user-plus"></i>Add</button>
+            </div>
+        </div>
+        </form>
+    </div>
+<script src="script.js"></script>
+
+</body>
+</html>
